@@ -10,4 +10,4 @@ INTEGRANTES:
 - Jean Carretero
 
 # ScreenShots
-![](demo.jpg)
+![](test.png)
