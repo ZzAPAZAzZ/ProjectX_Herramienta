@@ -8,3 +8,6 @@ Categoria: 2D platform , Shoot'm Up.
 INTEGRANTES:
 - Alfredo Apaza
 - Jean Carretero
+
+# ScreenShots
+![](demo.jpg)
