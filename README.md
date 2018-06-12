@@ -11,3 +11,30 @@ INTEGRANTES:
 
 # ScreenShots
 ![](test.png)
+
+
+# Propiedades del Formato
+El tamaño del mapa sera de 1200 x 600
+El tamaño de las ranuras de Tile sera de 50x50
+## Capas
+
+### Capa de Fondo
+La capa de fondo almacenara imagenes que se ubicaran en el fondo del nivel.
+
+### Capa de Probs 
+La capa de probs poseera un PosX , PosY y Profundidad para que estos puedan estar al frente o al fondo.
+
+### Capa de Tiles 
+Los tiles tendran PosX, PosY , estos tendran tamaños exactos y medidos como 50x50 ,  100x50 ,etc .
+
+### Capa de Items 
+Almacenara la posicion inicial de los items 
+
+## Tileset
+Estaran en la carpeta "Img" del proyecto , tendran tamaños fijos.
+
+## Archivos
+Iconos de Mini-Herramientas como Eliminar,Mover,etc.Estos estaran en una carpeta llamada "Icon".
+
+## Otros
+Posicion Inicial del Player
