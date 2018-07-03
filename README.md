@@ -18,16 +18,16 @@ El tamaño del mapa sera de 1200 x 600
 El tamaño de las ranuras de Tile sera de 50x50
 ## Capas
 
-### Capa de Fondo
+### Capa de Fondo (Funciona)
 La capa de fondo almacenara imagenes que se ubicaran en el fondo del nivel.
 
-### Capa de Probs 
+### Capa de Probs (Funciona)
 La capa de probs poseera un PosX , PosY y Profundidad para que estos puedan estar al frente o al fondo.
 
-### Capa de Tiles 
+### Capa de Tiles (Funciona)
 Los tiles tendran PosX, PosY , estos tendran tamaños exactos y medidos como 50x50 ,  100x50 ,etc .
 
-### Capa de Items 
+### Capa de Items (Aun no inplementado)
 Almacenara la posicion inicial de los items 
 
 ## Tileset
