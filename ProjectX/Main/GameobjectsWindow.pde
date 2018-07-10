@@ -20,19 +20,25 @@ class Gameobjectswindow{
   }
   
   public void Start(){
-    img = loadImage("tiles/tile1.png");
-    GameObjects.add(img);
-    img = loadImage("tiles/tile2.png");
-    GameObjects.add(img);
-    img = loadImage("tiles/tile3.png");
-    GameObjects.add(img);
-    img = loadImage("tiles/tile4.png");
-    GameObjects.add(img);
-    img = loadImage("tiles/tile5.png");
-    GameObjects.add(img);
-    img = loadImage("tiles/tile6.png");
-    GameObjects.add(img);
     img = loadImage("tiles/pisoStorm.png");
+    GameObjects.add(img);
+    img = loadImage("tiles/pisoStorm2.png");
+    GameObjects.add(img);
+    img = loadImage("tiles/pisoStorm3.png");
+    GameObjects.add(img);
+    img = loadImage("tiles/pisoStorm4.png");
+    GameObjects.add(img);
+    img = loadImage("tiles/pisoStorm5.png");
+    GameObjects.add(img);
+    img = loadImage("tiles/pisoStorm6.png");
+    GameObjects.add(img);
+    img = loadImage("tiles/pisoStorm7.png");
+    GameObjects.add(img);
+    img = loadImage("tiles/pisoStorm8.png");
+    GameObjects.add(img);
+    img = loadImage("tiles/pisoStorm9.png");
+    GameObjects.add(img);
+    img = loadImage("tiles/pisoStorm10.png");
     GameObjects.add(img);
     
     //Load Background
@@ -77,6 +83,10 @@ class Gameobjectswindow{
     img = loadImage("props/p9.png");
     Props.add(img);
     
+    //Load Items
+    img = loadImage("items/vida.png");
+    Items.add(img);
+    
   }
   
   void dibujar(){
@@ -98,7 +108,7 @@ class Gameobjectswindow{
       break;
       
       case 4:{
-        
+        GrupoDeItems();
       }
       break;
       
@@ -121,6 +131,7 @@ class Gameobjectswindow{
     CreateButtonObject(90 , 150 , 8 ,BackGrounds);
     CreateButtonObject(170 , 150 , 9 ,BackGrounds);
     CreateButtonObject(10 , 220 , 10 ,BackGrounds);
+   
   }
   
   // Se crea el Grupo de Props
@@ -145,6 +156,13 @@ class Gameobjectswindow{
     CreateButtonObject(90,80,5, GameObjects);
     CreateButtonObject(170,80,6, GameObjects);
     CreateButtonObject(10,150,7, GameObjects);
+    CreateButtonObject(10,150,8, GameObjects);
+    CreateButtonObject(90,150,9, GameObjects);
+    CreateButtonObject(170,150,10, GameObjects);
+  }
+  
+  void GrupoDeItems(){
+    CreateButtonObject(10,10,1 , Items);
   }
  
   void CreateButtonObject(int x , int y , int index, ArrayList<PImage> Lista){

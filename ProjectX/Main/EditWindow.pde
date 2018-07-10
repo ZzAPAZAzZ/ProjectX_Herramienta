@@ -50,7 +50,8 @@ class Editwindow{
       }
     }
   }
-
+  
+  //Guardamos los datos en sus listas
   public void updateData(int x, int y){
     
     if(mygameobjects.indexGamObj > 0){
@@ -137,7 +138,7 @@ class Editwindow{
       int num = data.Items.get(i+2);
       
       if(num > 0){
-        image(mygameobjects.GameObjects.get(num - 1) ,(50 * x),  (50 * y), 50 , 50);
+        image(mygameobjects.Items.get(num - 1) ,(50 * x),  (50 * y), 50 , 50);
       }
     }
   }
@@ -151,6 +152,9 @@ class Editwindow{
         file.print("|");
       }
     }
+    if(data.Fondos.size() < 1){
+      file.print(-1);
+    }
     file.print(Separate);
     
     for(int i = 0; i< data.Props.size();i++){
@@ -158,6 +162,9 @@ class Editwindow{
         file.print(data.Props.get(i));
         file.print("|");
       }
+    }
+    if(data.Props.size() < 1){
+      file.print(-1);
     }
     file.print(Separate);
     
@@ -167,6 +174,20 @@ class Editwindow{
         file.print("|");
       }
     }
+    if(data.Tiles.size() < 1){
+      file.print(-1);
+    }
+    file.print(Separate);
+    
+    for(int i = 0; i< data.Items.size();i++){
+      if(i < data.Items.size()){
+        file.print(data.Items.get(i));
+        file.print("|");
+      }
+    }
+    if(data.Items.size() < 1){
+      file.print(-1);
+    }
     file.flush();
     
     println("archivo guardado");
@@ -174,25 +195,44 @@ class Editwindow{
   
   void removeData(int x, int y){
     
-    /*if(mygameobjects.indexGamObj > 0){
-      
-      data.Tiles.add(x);
-      data.Tiles.add(y);
-      data.Tiles.add(mygameobjects.indexGamObj);
-      println(x,y,mygameobjects.indexGamObj);
-      
-    }*/
-    for(int i = 0; i < data.Tiles.size(); i+=3){
-      if(data.Tiles.get(i) == x){
-        if(data.Tiles.get(i+1) == y){
-          data.Tiles.set(i,-1);
-          data.Tiles.set(i+1,-1);
-          data.Tiles.set(i+2,-1);
-          println(data.Tiles.get(i));
+    switch(mylayer.IndexCapa){
+        case 1:{
+          RemoveDataCapa(x,y,data.Fondos);
+        }
+        break;
+        
+        case 2:{
+           RemoveDataCapa(x,y,data.Props);
+        }
+        break;
+        
+        case 3:{
+           RemoveDataCapa(x,y,data.Tiles);
+        }
+        break;
+        
+        case 4:{
+           RemoveDataCapa(x,y,data.Items);
+        }
+        break;
+        
+        case 5:{
+        
+        }
+        break;
+      }
+  }
+  
+  void RemoveDataCapa(int x, int y ,ArrayList<Integer> lista){
+    for(int i = 0; i < lista.size(); i+=3){
+      if(lista.get(i) == x){
+        if(lista.get(i+1) == y){
+          lista.set(i,-1);
+          lista.set(i+1,-1);
+          lista.set(i+2,-1);
         }
       }
     }
-    
   }
   
   void removeDataHelper(){
