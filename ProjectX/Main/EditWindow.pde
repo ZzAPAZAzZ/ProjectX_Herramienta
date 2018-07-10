@@ -74,6 +74,7 @@ class Editwindow{
           data.Tiles.add(x);
           data.Tiles.add(y);
           data.Tiles.add(mygameobjects.indexGamObj);
+          println(x,y,mygameobjects.indexGamObj);
         }
         break;
         
@@ -142,6 +143,24 @@ class Editwindow{
   }
   
   void saveData(){
+    String Separate = System.getProperty("line.separator");
+    
+    for(int i = 0; i< data.Fondos.size();i++){
+      if(i < data.Fondos.size()){
+        file.print(data.Fondos.get(i));
+        file.print("|");
+      }
+    }
+    file.print(Separate);
+    
+    for(int i = 0; i< data.Props.size();i++){
+      if(i < data.Props.size()){
+        file.print(data.Props.get(i));
+        file.print("|");
+      }
+    }
+    file.print(Separate);
+    
     for(int i = 0; i< data.Tiles.size();i++){
       if(i < data.Tiles.size()){
         file.print(data.Tiles.get(i));

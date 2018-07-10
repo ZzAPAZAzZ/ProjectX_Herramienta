@@ -85,25 +85,6 @@ void mouseClicked(){
     file = createWriter(path);
     myedition.saveData();
   }
-
-  /*void onCreateJson(){
-    json = new  JSONObject();
-    
-    ArrayList<Integer> demo = new ArrayList<Integer>();
-    demo.add(1);
-    demo.add(2);
-    demo.add(3);
-    demo.add(4);
-    
-    json.setInt("Tiles",1);
-    json.setInt("Tiles",2);
-    json.setInt("Tiles",1);
-    json.setFloat("Fondo",1);
-    json.setFloat("Props",1);
-    json.setFloat("Items",1);
-    
-    saveJSONObject(json,"new.json");
-  }*/
   
   boolean overRect(int x, int y, int width , int height)  {
     if (mouseX >= x && mouseX <= x+width && mouseY >= y && mouseY <= y+height) {

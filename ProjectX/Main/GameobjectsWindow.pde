@@ -20,19 +20,19 @@ class Gameobjectswindow{
   }
   
   public void Start(){
-    img = loadImage("Gustman/piso.png");
+    img = loadImage("tiles/tile1.png");
     GameObjects.add(img);
-    img = loadImage("Gustman/stair.png");
+    img = loadImage("tiles/tile2.png");
     GameObjects.add(img);
-    img = loadImage("Gustman/background.png");
+    img = loadImage("tiles/tile3.png");
     GameObjects.add(img);
-    img = loadImage("Gustman/spikes.png");
+    img = loadImage("tiles/tile4.png");
     GameObjects.add(img);
-    img = loadImage("Gustman/wall1.png");
+    img = loadImage("tiles/tile5.png");
     GameObjects.add(img);
-    img = loadImage("Gustman/wall2.png");
+    img = loadImage("tiles/tile6.png");
     GameObjects.add(img);
-    img = loadImage("pisoStorm.png");
+    img = loadImage("tiles/pisoStorm.png");
     GameObjects.add(img);
     
     //Load Background
@@ -58,23 +58,23 @@ class Gameobjectswindow{
     BackGrounds.add(img);
     
     //Load Props
-    img = loadImage("Gustman/p1.png");
+    img = loadImage("props/p1.png");
     Props.add(img);
-    img = loadImage("Gustman/p2.png");
+    img = loadImage("props/p2.png");
     Props.add(img);
-    img = loadImage("Gustman/p3.png");
+    img = loadImage("props/p3.png");
     Props.add(img);
-    img = loadImage("Gustman/p4.png");
+    img = loadImage("props/p4.png");
     Props.add(img);
-    img = loadImage("Gustman/p5.png");
+    img = loadImage("props/p5.png");
     Props.add(img);
-    img = loadImage("Gustman/p6.png");
+    img = loadImage("props/p6.png");
     Props.add(img);
-    img = loadImage("Gustman/p7.png");
+    img = loadImage("props/p7.png");
     Props.add(img);
-    img = loadImage("Gustman/p8.png");
+    img = loadImage("props/p8.png");
     Props.add(img);
-    img = loadImage("Gustman/p9.png");
+    img = loadImage("props/p9.png");
     Props.add(img);
     
   }
@@ -144,6 +144,7 @@ class Gameobjectswindow{
     CreateButtonObject(10,80,4, GameObjects);
     CreateButtonObject(90,80,5, GameObjects);
     CreateButtonObject(170,80,6, GameObjects);
+    CreateButtonObject(10,150,7, GameObjects);
   }
  
   void CreateButtonObject(int x , int y , int index, ArrayList<PImage> Lista){
